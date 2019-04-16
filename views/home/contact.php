@@ -7,7 +7,7 @@
             <div class="col-sm-4 col-sm-offset-4 padding-right">
 
                 <?php if ($result): ?>
-                    <p>Повідомлення відправлено! Ми надамо відповідь на вказаний email.</p>
+                    <p>Повідомлення відправлено! Ми надамо відповідь на вказаний email. </p>
                 <?php else: ?>
                     <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>
