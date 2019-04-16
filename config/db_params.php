@@ -4,6 +4,6 @@
 return array(
     'host' => 'localhost',
     'dbname' => 'phpshop',
-    'user' => 'phpstart',
+    'user' => 'root',
     'password' => '',
 );

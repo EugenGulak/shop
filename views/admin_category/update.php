@@ -8,14 +8,14 @@
 
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/category">Управление категориями</a></li>
-                    <li class="active">Редактировать категорию</li>
+                    <li><a href="/admin">Адмінпанель</a></li>
+                    <li><a href="/admin/category">Управління категоріями</a></li>
+                    <li class="active">Редагувати категорію</li>
                 </ol>
             </div>
 
 
-            <h4>Редактировать категорию "<?php echo $category['name']; ?>"</h4>
+            <h4>Редагувати категорію "<?php echo $category['name']; ?>"</h4>
 
             <br/>
 
@@ -26,7 +26,7 @@
                         <p>Название</p>
                         <input type="text" name="name" placeholder="" value="<?php echo $category['name']; ?>">
 
-                        <p>Порядковый номер</p>
+                        <p>Порядковий номер</p>
                         <input type="text" name="sort_order" placeholder="" value="<?php echo $category['sort_order']; ?>">
                         
                         <p>Статус</p>
@@ -37,7 +37,7 @@
 
                         <br><br>
                         
-                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                        <input type="submit" name="submit" class="btn btn-default" value="Зберегти">
                     </form>
                 </div>
             </div>

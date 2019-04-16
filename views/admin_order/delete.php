@@ -8,20 +8,20 @@
 
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление заказами</a></li>
-                    <li class="active">Удалить заказ</li>
+                    <li><a href="/admin">Адмінпанель</a></li>
+                    <li><a href="/admin/order">Управління замовлення</a></li>
+                    <li class="active">Видалити замовлення</li>
                 </ol>
             </div>
 
 
-            <h4>Удалить заказ #<?php echo $id; ?></h4>
+            <h4>Видалили замовлення #<?php echo $id; ?></h4>
 
 
-            <p>Вы действительно хотите удалить этот заказ?</p>
+            <p>Ви дійсно хочете видалити це замовлення?</p>
 
             <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
+                <input type="submit" name="submit" value="Видалити" />
             </form>
 
         </div>

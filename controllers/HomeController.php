@@ -3,7 +3,7 @@
 /**
  * Контроллер CartController
  */
-class SiteController
+class HomeController
 {
 
     /**
@@ -19,9 +19,8 @@ class SiteController
 
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();
-
         // Подключаем вид
-        require_once(ROOT . '/views/site/index.php');
+        require_once(ROOT . '/views/home/index.php');
         return true;
     }
 
@@ -63,7 +62,7 @@ class SiteController
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/site/contact.php');
+        require_once(ROOT . '/views/home/contact.php');
         return true;
     }
     
@@ -73,7 +72,7 @@ class SiteController
     public function actionAbout()
     {
         // Подключаем вид
-        require_once(ROOT . '/views/site/about.php');
+        require_once(ROOT . '/views/home/about.php');
         return true;
     }
 

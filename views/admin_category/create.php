@@ -8,14 +8,14 @@
 
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление категориями</a></li>
-                    <li class="active">Добавить категорию</li>
+                    <li><a href="/admin">Адмінпанель</a></li>
+                    <li><a href="/admin/order">Управління категоріями</a></li>
+                    <li class="active">Додати категорію</li>
                 </ol>
             </div>
 
 
-            <h4>Добавить новую категорию</h4>
+            <h4>Додати нову категорію</h4>
 
             <br/>
 
@@ -34,18 +34,18 @@
                         <p>Название</p>
                         <input type="text" name="name" placeholder="" value="">
 
-                        <p>Порядковый номер</p>
+                        <p>Порядковий номер</p>
                         <input type="text" name="sort_order" placeholder="" value="">
 
                         <p>Статус</p>
                         <select name="status">
-                            <option value="1" selected="selected">Отображается</option>
-                            <option value="0">Скрыта</option>
+                            <option value="1" selected="selected">Відображається</option>
+                            <option value="0">Скрита</option>
                         </select>
 
                         <br><br>
 
-                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                        <input type="submit" name="submit" class="btn btn-default" value="Зберегти">
                     </form>
                 </div>
             </div>

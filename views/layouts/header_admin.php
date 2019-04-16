@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Админпанель</title>
+        <title>Адмінпанель</title>
         <link href="/template/css/bootstrap.min.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                             <div class="col-sm-6">
                                 <div class="contactinfo">
                                     <h5>
-                                        <a href="/admin"><i class="fa fa-edit"></i> Админпанель</a>
+                                        <a href="/admin"><i class="fa fa-edit"></i> Адмінпанель</a>
                                     </h5>
                                 </div>
                             </div>

@@ -8,14 +8,14 @@
 
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление заказами</a></li>
-                    <li class="active">Редактировать заказ</li>
+                    <li><a href="/admin">Адмінпанель</a></li>
+                    <li><a href="/admin/order">Управління замовленнями</a></li>
+                    <li class="active">Редагувати замовлення</li>
                 </ol>
             </div>
 
 
-            <h4>Редактировать заказ #<?php echo $id; ?></h4>
+            <h4>Редагувати замовлення #<?php echo $id; ?></h4>
 
             <br/>
 
@@ -37,14 +37,14 @@
 
                         <p>Статус</p>
                         <select name="status">
-                            <option value="1" <?php if ($order['status'] == 1) echo ' selected="selected"'; ?>>Новый заказ</option>
-                            <option value="2" <?php if ($order['status'] == 2) echo ' selected="selected"'; ?>>В обработке</option>
-                            <option value="3" <?php if ($order['status'] == 3) echo ' selected="selected"'; ?>>Доставляется</option>
-                            <option value="4" <?php if ($order['status'] == 4) echo ' selected="selected"'; ?>>Закрыт</option>
+                            <option value="1" <?php if ($order['status'] == 1) echo ' selected="selected"'; ?>>Нове замовлення</option>
+                            <option value="2" <?php if ($order['status'] == 2) echo ' selected="selected"'; ?>>В обработці</option>
+                            <option value="3" <?php if ($order['status'] == 3) echo ' selected="selected"'; ?>>Доставляється</option>
+                            <option value="4" <?php if ($order['status'] == 4) echo ' selected="selected"'; ?>>Завершено</option>
                         </select>
                         <br>
                         <br>
-                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                        <input type="submit" name="submit" class="btn btn-default" value="Зберегти">
                     </form>
                 </div>
             </div>

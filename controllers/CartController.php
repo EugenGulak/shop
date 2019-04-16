@@ -149,7 +149,7 @@ class CartController
                     $adminEmail = 'php.start@mail.ru';
                     $message = '<a href="http://digital-mafia.net/admin/orders">Список заказов</a>';
                     $subject = 'Новый заказ!';
-                    mail($adminEmail, $subject, $message);
+                    //mail($adminEmail, $subject, $message);
 
                     // Очищаем корзину
                     Cart::clear();

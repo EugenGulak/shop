@@ -1,33 +1,17 @@
 <?php
 
-/**
- * Класс Router
- * Компонент для работы с маршрутами
- */
+
 class Router
 {
-
-    /**
-     * Свойство для хранения массива роутов
-     * @var array 
-     */
     private $routes;
 
-    /**
-     * Конструктор
-     */
     public function __construct()
     {
-        // Путь к файлу с роутами
         $routesPath = ROOT . '/config/routes.php';
-
-        // Получаем роуты из файла
         $this->routes = include($routesPath);
     }
 
-    /**
-     * Возвращает строку запроса
-     */
+    //Возвращает строку типа string
     private function getURI()
     {
         if (!empty($_SERVER['REQUEST_URI'])) {
@@ -35,25 +19,26 @@ class Router
         }
     }
 
-    /**
-     * Метод для обработки запроса
-     */
+
     public function run()
     {
-        // Получаем строку запроса
+
+        // Получить строку запроса
         $uri = $this->getURI();
 
-        // Проверяем наличие такого запроса в массиве маршрутов (routes.php)
+        // Проверить наличие такого запроса в routes.php
         foreach ($this->routes as $uriPattern => $path) {
 
-            // Сравниваем $uriPattern и $uri
-            if (preg_match("~$uriPattern~", $uri)) {
+            //Сравнение $uriPattern и $uri
+            if (preg_match("~^$uriPattern$~", $uri)) {
+
+
 
                 // Получаем внутренний путь из внешнего согласно правилу.
-                $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
 
-                // Определить контроллер, action, параметры
-
+                $internalRoute = preg_replace("~^$uriPattern$~", $path, $uri);
+               // Если есть совпадение, определить каой контролер
+                // и action обрабатывают запрос
                 $segments = explode('/', $internalRoute);
 
                 $controllerName = array_shift($segments) . 'Controller';
@@ -61,30 +46,29 @@ class Router
 
                 $actionName = 'action' . ucfirst(array_shift($segments));
 
+                //\echo "<br>controller name: ".$controllerName;
+                //echo "<br>action name: ".$actionName;
                 $parameters = $segments;
+                //echo '<pre>';
+                //print_r($parameters);
+                //die;
 
                 // Подключить файл класса-контроллера
-                $controllerFile = ROOT . '/controllers/' .
-                        $controllerName . '.php';
+                $controllerFile = ROOT . '/controllers/' .$controllerName . '.php';
 
                 if (file_exists($controllerFile)) {
                     include_once($controllerFile);
                 }
 
-                // Создать объект, вызвать метод (т.е. action)
+                // Создать обьект, вызвать метод (т.е.action)
                 $controllerObject = new $controllerName;
-
-                /* Вызываем необходимый метод ($actionName) у определенного 
-                 * класса ($controllerObject) с заданными ($parameters) параметрами
-                 */
                 $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
-
-                // Если метод контроллера успешно вызван, завершаем работу роутера
-                if ($result != null) {
+                if ($result != null){
                     break;
                 }
             }
         }
-    }
 
+
+    }
 }

@@ -38,9 +38,8 @@ return array(
     // Админпанель:
     'admin' => 'admin/index',
     // О магазине
-    'contacts' => 'site/contact',
-    'about' => 'site/about',
+    'contacts' => 'home/contact',
+    'about' => 'home/about',
     // Главная страница
-    'index.php' => 'site/index', // actionIndex в SiteController
-    '' => 'site/index', // actionIndex в SiteController
+    '' => 'home/index', // actionIndex в SiteController
 );
