@@ -25,9 +25,9 @@
                             <p>Ваша почтова скринька</p>
                             <input type="email" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
                             <p>Повідомлення</p>
-                            <input type="text" name="userText" placeholder="Сообщение" value="<?php echo $userText; ?>"/>
+                            <input type="text" name="userText" placeholder="Повідомлення" value="<?php echo $userText; ?>"/>
                             <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Отправить" />
+                            <input type="submit" name="submit" class="btn btn-default" value="Відправити" />
                         </form>
                     </div><!--/sign up form-->
                 <?php endif; ?>

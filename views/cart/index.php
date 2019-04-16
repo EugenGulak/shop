@@ -62,7 +62,7 @@
                         
                         <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформити замовлення</a>
                     <?php else: ?>
-                        <p>Кошик пустий/p>
+                        <p>Кошик пустий</p>
                         
                         <a class="btn btn-default checkout" href="/"><i class="fa fa-shopping-cart"></i> Повернутись до вибору товару</a>
                     <?php endif; ?>
