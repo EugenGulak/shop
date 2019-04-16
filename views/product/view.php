@@ -38,23 +38,23 @@
                                 <?php endif; ?>
 
                                 <h2><?php echo $product['name']; ?></h2>
-                                <p>Код товара: <?php echo $product['code']; ?></p>
+                                <p>Код товару: <?php echo $product['code']; ?></p>
                                 <span>
                                     <span>US $<?php echo $product['price']; ?></span>
                                     <a href="#" data-id="<?php echo $product['id']; ?>"
                                        class="btn btn-default add-to-cart">
-                                        <i class="fa fa-shopping-cart"></i>В корзину
+                                        <i class="fa fa-shopping-cart"></i>У кошик
                                     </a>
                                 </span>
-                                <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
-                                <p><b>Производитель:</b> <?php echo $product['brand']; ?></p>
+                                <p><b>Наявність:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
+                                <p><b>Виробник:</b> <?php echo $product['brand']; ?></p>
                             </div><!--/product-information-->
                         </div>
                     </div>
                     <div class="row">                                
                         <div class="col-sm-12">
                             <br/>
-                            <h5>Описание товара</h5>
+                            <h5>Опис товару</h5>
                             <?php echo $product['description']; ?>
                         </div>
                     </div>
